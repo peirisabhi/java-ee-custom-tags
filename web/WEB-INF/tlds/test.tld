@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+  <tlib-version>1.0</tlib-version>
+  <short-name>test</short-name>
+  <uri>test</uri>
+  
+  <tag>
+      <name>test</name>
+      <tag-class>com.Test</tag-class>
+      <!--<body-content>empty</body-content>-->
+      <!--<body-content>scriptless</body-content>-->
+      <body-content>tagdependent</body-content>
+      <attribute>
+          <name>first_name</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>last_name</name>
+          <required>false</required>
+      </attribute>
+  </tag>
+  
+  <tag>
+      <name>loop</name>
+      <tag-class>com.Loop</tag-class>
+      <body-content>scriptless</body-content>
+      <attribute>
+          <name>start</name>
+          <type>int</type>
+      </attribute>
+      <attribute>
+          <name>end</name>
+          <type>int</type>
+      </attribute>
+  </tag>
+  
+  <tag>
+      <name>forEach</name>
+      <tag-class>com.LoopCollection</tag-class>
+      <body-content>scriptless</body-content>
+      <attribute>
+          <name>items</name>
+          <required>true</required>
+          <rtexprvalue>true</rtexprvalue>
+      </attribute>
+      <attribute>
+          <name>var</name>
+          <required>>true</required>
+      </attribute>
+      
+  </tag>
+  
+</taglib>
